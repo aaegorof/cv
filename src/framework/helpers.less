@@ -1,0 +1,212 @@
+@import 'mixins';
+
+// Use to set the color of something
+.generate-palette-classes(color, @pallete, color-);
+// Use to set the background of something
+.generate-palette-classes(background-color, @pallete, bg-);
+
+/**
+ * Flow changing
+ */
+
+.relative {
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+.admin-only {
+  display: none;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.push-right {
+  margin-left: auto !important;
+}
+.push-left {
+  margin-right: auto !important;
+}
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
+.no-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+.shadow {
+  box-shadow: @shadow;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+.bg-full {
+  .bg-full();
+}
+.img-responsive {
+  width: 100%;
+}
+.img-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.text-clip {
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+.centered-content {
+  // TODO: check this realization for cross-browser
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-multiline {
+  // TODO: check this realization for cross-browser
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.inline-blocks-container {
+  & > * {
+    display: inline-block;
+  }
+}
+
+/**
+ * Text aligning
+ * NOTE: responsive classes also generated for this
+ */
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.no-underline {
+  text-decoration: none;
+}
+
+/**
+ * Font size helpers
+ */
+
+.font-tiny {
+  font-size: @font-size-tiny;
+}
+.font-small {
+  font-size: @font-size-small;
+}
+.font-normal {
+  font-size: @font-size;
+}
+.font-large {
+  font-size: @font-size-large;
+}
+.font-larger {
+  font-size: 1.3em;
+}
+.font-big {
+  font-size: @font-size-big;
+}
+.font-huge {
+  font-size: @font-size-huge;
+}
+.font-smaller {
+  font-size: 0.9em;
+}
+
+/**
+ * Font style helpers
+ */
+
+.font-accented {
+  font-family: @font-family-alter;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.underline {
+  text-decoration: underline;
+}
+
+
+/**
+ * Font size helpers
+ */
+
+.font-regular {
+  font-weight: @font-weight-regular !important; // lesshint importantRule: false
+}
+.font-semibold {
+  font-weight: @font-weight-semibold;
+}
+.font-medium {
+  font-weight: @font-weight-medium;
+}
+.font-bold {
+  font-weight: @font-weight-bold;
+}
+.font-light {
+  font-weight: @font-weight-light;
+}
+.font-extralight {
+  font-weight: @font-weight-extralight;
+}
+.font-thin {
+  font-weight: @font-weight-thin;
+}
+
+/**
+ * Various helpers
+ */
+
+.no-animate {
+  -webkit-transition: none !important; // lesshint importantRule: false
+  transition: none !important; // lesshint importantRule: false
+}
+
+.pointer,
+.hoverable {
+  cursor: pointer;
+}
+
+// Disables text selection
+.no-select {
+  &::selection,
+  *::selection {
+    background: transparent;
+    color: inherit;
+  }
+}
+// Disable scroll
+.no-scroll {
+  overflow: hidden;
+}

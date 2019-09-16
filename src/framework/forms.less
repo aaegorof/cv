@@ -1,0 +1,212 @@
+input {
+  border: none;
+  outline: none;
+  &[type=text],
+  &[type=email],
+  &[type=tel],
+  &[type=password],
+  &[type=number]
+   {
+    height: @input-height;
+    background: fade(@cotton, 50%);
+    border-bottom: @cotton;
+    padding-left: @m-small;
+    padding-right: @m-small;
+    border-radius: 0;
+  }
+  &:not([type=checkbox]) {
+    width: 100%;
+  }
+  & + input {
+    margin-top: @m-medium;
+  }
+  &[type=submit] {
+    .button-default();
+  }
+}
+select {
+  height: @input-height;
+  background: transparent;
+  border-radius: @radius;
+  width: 100%;
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  width: 100%;
+  background: fade(@cotton, 50%);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: @m-small;
+  max-width: 100%;
+}
+
+
+input[type=radio] {
+  @size: 20px;
+  @margin: floor(@size/2);
+  @border: 3px;
+  
+  display: inline;
+  width: @size !important;
+  height: @size !important;
+  vertical-align: middle;
+  opacity: 0;
+  margin-right: @margin;
+  
+  & + span {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: @size;
+      height: @size;
+      background: @cotton;
+      display: inline;
+      border-radius: 50%;
+      left: -@size - @margin;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      box-shadow: 0 0 0 1px @tin;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: -@size - @margin + @border;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
+      border-radius: 50%;
+      width: @size - @border * 2;
+      height: @size - @border * 2;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: border 0.2s @bezier, transform 0.15s @bezier;
+    }
+  }
+  // if checked
+  &:checked {
+    & + span {
+      &:after {
+        background: @primary;
+        border: @border solid @primary;
+        transform: translateY(-50%) scale(1);
+      }
+    }
+  }
+}
+
+.input-checkbox[type=checkbox],
+.input-checkboxes [type=checkbox]{
+  @size: 18px;
+  @radius: 4px;
+  @border: 2px;
+  
+  position: absolute;
+  left: -9999px;
+  & + label, 
+  & + span {
+    position: relative;
+    padding-left: 2em;
+    cursor: pointer;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: @size; 
+      height: @size;
+      background: @white;
+      border-radius: @radius;
+      box-shadow: 0 0 0 1px @tin;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: @border; 
+      left: @border;
+      font-size: 1.4em;
+      line-height: 0.8;
+      color: @text-color;
+      transition: all .2s;
+      width: @size - @border * 2;
+      height: @size - @border * 2;
+      border: @border solid @white;
+      border-radius: @radius;
+      background: @primary;
+      box-sizing: border-box;
+    }
+  }
+  // not checked
+  &:not(:checked) {
+    & + label:after,
+    & + span:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  // checked
+  &:checked + label:after,
+  &:checked + span:after,{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  & + label {
+    margin-top: @m-medium;
+  }
+}
+
+
+
+.form-on-dark {
+  input {
+    background: fade(@white, 5%);
+    color: @white;
+    &:-webkit-input-placeholder,
+    &:placeholder {
+      color: fade(@white, 60%);
+    }
+  }
+}
+
+.form-on-primary {
+  input {
+    &[type=text],
+    &[type=email],
+    &[type=tel],
+    &[type=password]
+     {
+      background: fade(@white, 30%);
+      color: @white;
+      border-bottom: none;
+    }
+    &::-webkit-input-placeholder,
+    &::placeholder {
+      color: fade(@white, 65%);
+    }  
+  }
+}
+
+.form-on-grey {
+  input {
+    &[type=text],
+    &[type=email],
+    &[type=tel],
+    &[type=password]
+     {
+      background: @white;
+      color: @text-color;
+      border-bottom: none;
+    }
+    &:-webkit-input-placeholder,
+    &:placeholder {
+      color: @text-color;
+    }
+  }
+}

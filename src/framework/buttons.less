@@ -1,0 +1,30 @@
+.button-default() {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: @font-accented;
+  border-radius: @radius;
+  font-weight: 400;
+  transition: background 0.1s @bezier;  
+}
+
+button {
+  .buttons(@pallete, false); // generate buttons class with the solid bg
+}
+
+.close-modal {
+  @size: 30px;
+  width: @size;
+  height: @size;
+  font-size: @size;
+  font-weight: bold;
+  color: @text-color;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
