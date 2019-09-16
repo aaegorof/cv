@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import style from "./style.less"
+import "./style.less"
 
 const Index = props => {
   const {left, right, onChange, checked, ...attr} = props

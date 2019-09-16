@@ -226,23 +226,34 @@ export const jobs = {
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
+      position: "Head of web",
+      company: "Slamstop",
+      website: "http://slamstop.com/",
+      startDate: "2015-03",
+      endDate: "2017-01",
+      stack: ["PHP", "Drupal", "Javascript", "Gulp"],
+      description: "Developed new multilanguage site\n" +
+          "Created and organised internal web portal to store some digital files for dedicated offices and partners.\n" +
+          "Online marketing\n" +
+          "Ads campaigns",
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
+      position: "Chief Digital Producer (CIS countries)",
+      company: "EY Russia (Ernst&Young)",
+      website: "http://ey.com/",
+      startDate: "2012-12",
+      endDate: "2014-12",
+      stack: ["Javascript", "CSS3", "jQuery"],
+      description: "Developing new templates for local and global corporate websites;\n" +
+          "Cross-browser compatible and responsive design;\n" +
+          "Maintaining the corporate website for all the CIS countries (ey.com);\n" +
+          "Design and prototyping according to the BrandBook\n" +
+          "Exerting control over contractors;\n" +
+          "Creating GIF, Flash and static banners and Javascript animation;\n" +
+          "Providing the best solution to the stakeholders\n" +
+          "Optimizing the global team’s day-to-day work by developing and sharing the handy scripts;\n" +
+          "Enhancing the company’s digital strategy, taking part in international conferences and meetings.",
       recommendations: ""
     },
     {
