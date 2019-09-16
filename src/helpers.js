@@ -2,22 +2,33 @@ import React, { useContext } from "react";
 import { general, tech } from "./data";
 import { StateContext } from "./context";
 
-export const Formatted = ({ val, data, children}) => {
+export const Formatted = ({ val, data, children, list}) => {
   const context = useContext(StateContext);
   const from = data || general;
 
+  const toFormat = (string, isList) => {
+    const textArray = isList ? string.split("\n") : string.split("\n\n")
+    return isList ? textArray.map((paragraph, index) => (
+        <li key={"li" + textArray[0]+[context.lang] + index}>
+          {paragraph
+              .split("\n")
+              .reduce((total, line) => <span key={line +[context.lang]}>{[total, <br />, line]}</span>
+              )}
+        </li>
+    )) : textArray.map((paragraph, index) => (
+        <p key={"p" + textArray[0]+[context.lang] + index}>
+          {paragraph
+              .split("\n")
+              .reduce((total, line) => <span key={line+[context.lang]}>{[total, <br />, line]}</span>
+              )}
+        </p>
+    ))
+  }
+
   if (children) {
-    console.log("rr");
     return (
         <>
-          {children.split("\n\n").map((paragraph, index) => (
-              <p key={children}>
-                {paragraph
-                    .split("\n")
-                    .reduce((total, line) => <span key={line}>{[total, <br />, line]}</span>
-                    )}
-              </p>
-          ))}
+          {toFormat(children, !!list)}
         </>
     );
   }
@@ -28,13 +39,7 @@ export const Formatted = ({ val, data, children}) => {
 
   return (
       <>
-        {from[context.lang][val].split("\n\n").map((paragraph, index) => (
-            <p key={val + index}>
-              {paragraph.split("\n").reduce((total, line) => (
-                  <span key={line}>{[total, <br />, line]}</span>
-              ))}
-            </p>
-        ))}
+        {toFormat(from[context.lang][val], !!list)}
       </>
   );
 };

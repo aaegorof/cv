@@ -41,7 +41,7 @@ export const general = {
     education:
       "Moscow State University of Instrument Engineering and Computer Science (MGUPI)",
     degree: "Master degree",
-    lang: "Russian – native\n" + "English – advanced\n",
+    lang: "Russian – native\n" +  "English – advanced",
     profText:
       "Having been working as a web-developer for over 7 years, I am enthusiastic about new technology and follow the latest trends in the field of web design and frontend development.\n" +
       "\n" +
@@ -257,33 +257,52 @@ export const jobs = {
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
+      position: "Web-developer, web-designer, Internet marketing specialist",
+      company: "Club la Costa",
+      website: "https://www.clcworld.com/",
+      startDate: "2012-05",
+      endDate: "2012-12",
+      stack: ["Javascript", "PHP", "jQuery", "Drupal"],
+      description: "Developing new websites from scratch and redesigning existing websites. Unfortunately, all the websites are gone.\n" +
+          "Designing print templates;\n" +
+          "Launching an Internet project on overseas commercial property;\n" +
+          "Developing a strategy for promotion of a new brand;\n" +
+          "Cooperation with the British and Spanish offices;\n" +
+          "Attracting new clients via Internet;\n" +
+          "Web analytics",
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
+      position: "Technical director",
+      company: "LTD Venskibal",
+      website: "http://venskibal.ru/",
+      startDate: "2010-11",
+      endDate: "2012-05",
+      stack: ["PHP" ,"jQuery", "CSS3"],
+      description: "Promoting Internet as a new sales channel;\n" +
+          "Maintaining corporate websites;\n" +
+          "Creating and promoting several public pages and communities in social networks (vk.com, facebook.com), total number of loyal clients in social networks – over 5,000 people;\n" +
+          "Running successful targeted advertising campaigns (CTR = 0.165, ROI=>700%);\n" +
+          "Increasing the number of clients by 20%;\n" +
+          "Traffic from social media was boosted up to the level of 30% of total web traffic;\n" +
+          "Got the company’s social media pages and communities to top 7 search results on Google and Yandex;\n" +
+          "Running an email marketing campaigns;\n" +
+          "Establishing and maintaining the client database (the database was expanded by 3,000 clients from the target audience);\n" +
+          "Cooperation with the sponsors, control over contractual performance;\n" +
+          "Cooperation with the office in Austria.",
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
+      position: "IT specialist",
+      company: "LTD Integrated Business services",
       website: "",
-      startDate: "",
-      endDate: "",
+      startDate: "2010-06",
+      endDate: "2010-11",
       stack: [],
-      description: "",
+      description: "The company is Yota’s “golden partner” and provides Yota technical solutions for businesses.\n" +
+          "Auditing and consulting services;\n" +
+          "Setting up hardware;\n" +
+          "Offering and implementing various technical solutions.",
       recommendations: ""
     },
   ]

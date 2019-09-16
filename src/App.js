@@ -33,7 +33,7 @@ const App = () => {
             <p className="color-ash">{general[lang].degree}</p>
           </div>
           <div className="language">
-            <Formatted val="lang" />
+            <Formatted val="lang" list/>
           </div>
         </div>
       </header>
