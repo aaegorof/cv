@@ -76,7 +76,8 @@ export const general = {
     Heducation: "Education",
     Hskills: "Professional skills",
     Hsoft: "Soft skills",
-    Hstack: "Technologies and lang"
+    Hstack: "Technologies and lang",
+    Hexp: "Professional experience"
   }
 };
 
@@ -133,68 +134,20 @@ export const jobs = {
       startDate: "2019-03",
       endDate: "2019-08",
       stack: ["React", "Redux", "TypeScript", "Webpack"],
-      description: "Build the internal interfaces for one of the products including a lot of data, metrics.\n" +
-          "Refactoring code and optimising UX",
+      description: "Создание интерфейсов личного кабинета с кучей различных метрик, графиков, данных, отчетов.\n" +
+          "Рефакторинг старого кода, создание новых реакт компонентов для универсальности и быстродействия",
       recommendations: ""
     },
     {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
-      recommendations: ""
-    },
-    {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
-      recommendations: ""
-    },
-    {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
-      recommendations: ""
-    },
-    {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
-      recommendations: ""
-    },
-    {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
-      recommendations: ""
-    },
-    {
-      position: "",
-      company: "",
-      website: "",
-      startDate: "",
-      endDate: "",
-      stack: [],
-      description: "",
+      position: "Frontend developer",
+      company: "SPENT",
+      website: "http://spentapp.com/",
+      startDate: "2017-01",
+      endDate: "2018-01",
+      stack: ["Angular 1.6", "WordPress","Gulp"],
+      description: "Создание spentapp.com на WordPress\n" +
+          "Разработка кеш-бек сервиса для рынка США с нуля. Большинство работы было связаны с созданием интерфейсов для личного кабинета пользователя\n" +
+          "Разработка сервиса для букинг отелей с системой кеш-бек для США рынка.",
       recommendations: ""
     },
 
@@ -257,22 +210,6 @@ export const jobs = {
       recommendations: ""
     },
     {
-      position: "Web-developer, web-designer, Internet marketing specialist",
-      company: "Club la Costa",
-      website: "https://www.clcworld.com/",
-      startDate: "2012-05",
-      endDate: "2012-12",
-      stack: ["Javascript", "PHP", "jQuery", "Drupal"],
-      description: "Developing new websites from scratch and redesigning existing websites. Unfortunately, all the websites are gone.\n" +
-          "Designing print templates;\n" +
-          "Launching an Internet project on overseas commercial property;\n" +
-          "Developing a strategy for promotion of a new brand;\n" +
-          "Cooperation with the British and Spanish offices;\n" +
-          "Attracting new clients via Internet;\n" +
-          "Web analytics",
-      recommendations: ""
-    },
-    {
       position: "Technical director",
       company: "LTD Venskibal",
       website: "http://venskibal.ru/",
@@ -290,6 +227,22 @@ export const jobs = {
           "Establishing and maintaining the client database (the database was expanded by 3,000 clients from the target audience);\n" +
           "Cooperation with the sponsors, control over contractual performance;\n" +
           "Cooperation with the office in Austria.",
+      recommendations: ""
+    },
+    {
+      position: "Web-developer, web-designer, Internet marketing specialist",
+      company: "Club la Costa",
+      website: "https://www.clcworld.com/",
+      startDate: "2012-05",
+      endDate: "2012-12",
+      stack: ["Javascript", "PHP", "jQuery", "Drupal"],
+      description: "Developing new websites from scratch and redesigning existing websites. Unfortunately, all the websites are gone.\n" +
+          "Designing print templates;\n" +
+          "Launching an Internet project on overseas commercial property;\n" +
+          "Developing a strategy for promotion of a new brand;\n" +
+          "Cooperation with the British and Spanish offices;\n" +
+          "Attracting new clients via Internet;\n" +
+          "Web analytics",
       recommendations: ""
     },
     {

@@ -6,11 +6,20 @@ import Joblist from "./Joblist";
 import Switch from "./components/Switch";
 import photoUrl from "./photo.jpg";
 import { general, tech } from "./data";
+import Lottie from 'react-lottie'
+import rocketanimation from "./lotties/rocket"
 
 const App = () => {
   const state = useContext(StateContext);
   const lang = state.lang;
-
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: rocketanimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
 
   return (
     <div className="App">
@@ -25,7 +34,7 @@ const App = () => {
             className="margin-large-t"
           />
         </div>
-        <div className="margin-large-l">
+        <div className="margin-large-l col-lg-6">
           <h1>{general[lang].name} CV</h1>
           <h3>{general[lang].Heducation}</h3>
           <div className="education">
@@ -35,6 +44,12 @@ const App = () => {
           <div className="language">
             <Formatted val="lang" list/>
           </div>
+        </div>
+        <div className="col-lg-3">
+        <Lottie options={lottieOptions}
+                width={200}
+                height={272}
+        />
         </div>
       </header>
 

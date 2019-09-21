@@ -1,0 +1,51 @@
+.timeline {
+  margin: 40px 0;
+}
+.timeline-header {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2em 0 3em;
+}
+.timeline-active {
+  position: relative;
+  &.reverse {
+    transform: scale(-1,1);
+    .timeline-item{
+      transform: scale(-1,1);
+    }
+    .date {
+      transform: translate(-50%) scale(-1,1);
+    }
+  }
+}
+.timeline-dot {
+  @size: 20px;
+  width: @size;
+  height: @size;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 5;
+  .date {
+    font-size: 12px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -@size * 1.5;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .timeline-item {
+    width:  @size;
+    height: @size;
+    display: none;
+    position: absolute;
+    bottom: -3 * @size;
+  }
+  &.active {
+    z-index: 10;
+    .timeline-item {
+      display: block;
+    }
+  }
+}
