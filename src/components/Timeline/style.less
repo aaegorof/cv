@@ -1,3 +1,4 @@
+@mobile: 500px;
 .timeline {
   margin: 40px 0;
 }
@@ -46,6 +47,30 @@
     z-index: 10;
     .timeline-item {
       display: block;
+    }
+  }
+}
+
+
+@media (max-width: @mobile) {
+  .timeline {
+    margin: 0;
+    background: transparent !important;
+  }
+  .timeline-dot {
+    height: auto;
+    width: 100%;
+    background: transparent !important;
+    position: static;
+    cursor: auto;
+    transform: none;
+    margin: 0 auto 1em;
+    .timeline-item {
+      display: block;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      height: auto;
     }
   }
 }
