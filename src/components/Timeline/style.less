@@ -1,5 +1,10 @@
 @mobile: 500px;
 
+.timeline-header {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2em 0 3em;
+}
 
 .timeline {
   margin: 40px 0;
@@ -14,13 +19,22 @@
       display: none;
       padding: 50px;
     }
+    @media (max-width: @mobile) {
+      .timeline-slide-wrap {
+        background: transparent;
+      }
+      .timeline-item {
+        display: block;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      .timeline-active, .timeline-dot {
+        display: none;
+      }
+    }
   }
 }
-.timeline-header {
-  text-transform: uppercase;
-  text-align: center;
-  margin: 2em 0 3em;
-}
+
 .timeline-active {
   position: relative;
   &.reverse {

@@ -7,7 +7,7 @@ export const general = {
     name: "Артемий Егоров",
     education:
       "МГУПИ (Московский Государственный Университет Приборостроения и Информатики) нынешний МИРЭА",
-    degree: "Инженер",
+    degree: "2010 - Инженер",
     lang: "Russian – родной\n" + "English – разговорный",
     profText:
       "Занимаюсь веб-разработкой более 7 лет, люблю новые технологии, внимательно слежу за тенденциями /трендами в области веб и UX.\n" +
@@ -47,7 +47,7 @@ export const general = {
     name: "Artemiy Egorov",
     education:
       "Moscow State University of Instrument Engineering and Computer Science (MGUPI)",
-    degree: "Master degree",
+    degree: "2010 - Master degree",
     lang: "Russian – native\n" +  "English – advanced",
     profText:
       "Having been working as a web-developer for over 7 years, I am enthusiastic about new technology and follow the latest trends in the field of web design and frontend development.\n" +

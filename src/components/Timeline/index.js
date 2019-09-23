@@ -74,7 +74,7 @@ const Timeline = ({
               <div
                 className="timeline-item"
                 key={index}
-                style={{ display: index === active ? "block" : "none" }}
+                style={{ display: index === active ? "block" : "" }}
               >
                 {ItemToShow(item)}
               </div>

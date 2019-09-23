@@ -10,12 +10,21 @@
 
 @import "fonts";
 
+body {
+  overflow-x: hidden;
+}
 .top-svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 27vw;
   z-index: -1;
+  @media @media-md-max {
+    width: 55vw;
+  }
+  @media @media-sm-max {
+    width: 80vw;
+  }
 }
 .oval-svg {
   position: absolute;
@@ -25,6 +34,24 @@
 .photo-wrap {
   display: flex;
   flex-direction: column;
+  position: relative;
+  &:before {
+    content: '1986';
+    color: white;
+    position: absolute;
+    font-weight: 600;
+    font-size: 22px;
+    top: 35%;
+    left: -25px;
+    display: inline-block;
+    mix-blend-mode: overlay;
+    letter-spacing: 2px;
+  }
+  @media @media-md-max {
+    &:before {
+      left: 0;
+    }
+  }
 }
 .photo {
   pointer-events: none;
@@ -63,7 +90,11 @@
     padding-right: @m-medium;
     margin: @m-tiny 0;
   }
+  @media @media-sm-max {
+    width: 100%;
+  }
 }
+
 .timeline {
   &.likeSlide {
     .timeline-dot.active {
@@ -117,7 +148,18 @@
   }
 }
 
-  @keyframes App-logo-spin {
+@media @media-md-max {
+  .rocket {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    & > div {
+      transform: scale(0.7);
+    }
+  }
+}
+
+@keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
     }

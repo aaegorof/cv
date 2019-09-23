@@ -38,7 +38,7 @@ const App = () => {
             className="margin-large-t"
           />
         </div>
-        <div className="margin-large-l col-lg-6">
+        <div className="lg-margin-large-l col-lg-6">
           <h1>{general[lang].name} CV</h1>
           <h3>{general[lang].Heducation}</h3>
           <div className="education">
@@ -49,7 +49,7 @@ const App = () => {
             <Formatted val="lang" list/>
           </div>
         </div>
-        <div className="col-lg-3">
+        <div className="col-lg-3 rocket">
         <Lottie options={lottieOptions}
                 width={200}
                 height={272}
