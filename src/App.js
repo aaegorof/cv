@@ -5,9 +5,12 @@ import "./App.less";
 import Joblist from "./Joblist";
 import Switch from "./components/Switch";
 import photoUrl from "./photo.jpg";
-import { general, tech } from "./data";
+import { general, tech, portfolio } from "./data";
 import Lottie from 'react-lottie'
 import rocketanimation from "./lotties/rocket"
+import topSvg from "./img/top-svg.svg"
+import ovalSvg from  "./img/Oval.svg"
+import Contacts from "./Contacts"
 
 const App = () => {
   const state = useContext(StateContext);
@@ -23,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <img src={topSvg} className="top-svg"/>
       <header className="header container row">
         <div className="photo-wrap">
           <img src={photoUrl} className="photo" alt={general[lang].name} />
@@ -74,7 +78,8 @@ const App = () => {
             </div>
           </div>
 
-          <div className="col-lg-6 lg-padding-big-l">
+          <div className="col-lg-6 lg-padding-big-l relative">
+            <img src={ovalSvg} className="oval-svg"/>
             <h2 className="text-center">{general[lang].Hsoft}</h2>
             <div>
               <Formatted val="softSkills" />
@@ -85,7 +90,24 @@ const App = () => {
         <div className="job-list">
           <Joblist lang={lang}/>
         </div>
+
+
+        <div className="freelance padding-big-tb">
+          <h2 className="text-center uppercase">{general[lang].Hportolio}</h2>
+          <div className="row">
+          {portfolio[lang].map( project =>
+              <div className="project-item" key={project.name}>
+                <strong><a href={project.link} target="_blank">{project.name}</a></strong>
+                <div className="description">{project.description}</div>
+                <div className="labels small tags row">{project.tags.map(tag => <div className="tag" key={tag}>{tag}</div>)}</div>
+              </div>
+          )}
+          </div>
+        </div>
+
       </div>
+
+      <Contacts />
     </div>
   );
 };

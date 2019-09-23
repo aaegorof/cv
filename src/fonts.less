@@ -12,6 +12,11 @@ body {
 }
 a {
   text-decoration: none;
+  color: @active;
+  transition: 0.15s color @bezier;
+  &:hover {
+    color: @primary;
+  }
 }
 h1 {
   margin: 0;

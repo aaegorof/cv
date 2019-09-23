@@ -1,4 +1,8 @@
 export const general = {
+  mob: "+79260812765",
+  email: "aaegorof@gmail.com",
+  linkedin: "https://www.linkedin.com/in/aaegorof",
+  facebook: "https://www.facebook.com/A.A.Egorov",
   ru: {
     name: "Артемий Егоров",
     education:
@@ -35,7 +39,9 @@ export const general = {
     Hskills: "Профессиональные навыки",
     Hsoft: "Soft skills",
     Hstack: "Технологии и языки:",
-    Hexp: "Опыт работы"
+    Hexp: "Опыт работы",
+    Hcontacts: "Связаться",
+    Hportolio: "Мои работы на фрилансе"
   },
   en: {
     name: "Artemiy Egorov",
@@ -78,7 +84,9 @@ export const general = {
     Hskills: "Professional skills",
     Hsoft: "Soft skills",
     Hstack: "Technologies and lang",
-    Hexp: "Professional experience"
+    Hexp: "Professional experience",
+    Hcontacts: "Contacts",
+    Hportolio: "Portfolio projects"
   }
 };
 
@@ -96,9 +104,10 @@ export const tech = {
       "Ajax",
       "CSS3",
       "HTML5",
-      "Angular 7",
+      "Angular",
       "Vue",
       "Less",
+        "Sass",
       "Gulp",
       "Webpack"
     ],
@@ -116,9 +125,10 @@ export const tech = {
       "Ajax",
       "CSS3",
       "HTML5",
-      "Angular 7",
+      "Angular",
       "Vue",
       "Less",
+        "Sass",
       "Gulp",
       "Webpack"
     ],
@@ -136,7 +146,8 @@ export const jobs = {
       endDate: "2019-08",
       stack: ["React", "Redux", "TypeScript", "Webpack"],
       description: "Создание интерфейсов личного кабинета с кучей различных метрик, графиков, данных, отчетов.\n" +
-          "Рефакторинг старого кода, создание новых реакт компонентов для универсальности и быстродействия",
+          "Рефакторинг старого кода, создание новых реакт компонентов для универсальности\n" +
+          "Работали со styled-components, ramda, typescript, rxjs, тесты на jest, написал необычный адаптивный ui-kit с сеткой из 64 колонок",
       recommendations: ""
     },
     {
@@ -243,12 +254,13 @@ export const jobs = {
       startDate: "2019-03",
       endDate: "2019-08",
       stack: ["React", "Redux", "TypeScript", "Webpack"],
-      description: "Build the internal interfaces for one of the products including a lot of data, metrics.\n" +
-          "Refactoring code and optimising UX",
+      description: "Build the internal interfaces with lots of data, metrics and logic.\n" +
+          "Refactoring code and optimising UX.\n" +
+          "We were working with styled-components, ramda, typescript, rxjs, тесты на jest, I wrote a little ui-kit with 64 columns grid",
       recommendations: ""
     },
     {
-      position: "Frontend developer\n",
+      position: "Frontend Developer\n",
       company: "SPENT",
       website: "http://spentapp.com/",
       startDate: "2017-01",
@@ -343,3 +355,132 @@ export const jobs = {
     },
   ]
 };
+
+
+
+export const portfolio = {
+  ru: [
+      {
+        name: "Физтех Акселератор",
+        link: "http://fizteh.sitewanted.ru",
+        description: "Небольшой красивый проект для физтех акселератора в итоге так и не вышел в продакшн. Делал удобную админку и весь фронт по готовому дизайну.",
+        tags: ["Wordpress", "Clean", "Easy-admin"]
+      },
+    {
+      name: "ISS Интеллектуальные социальные системы",
+      link: "https://iss.digital",
+      description: "IT компания создает комплексные онлайн-проекты в сфере автоматизации обратной связи и услуг умного города. Участвоввал в разработке фронта по готовому дизайну. Разрабатывал админскую часть ",
+      tags: ["Wordpress", "Easy-admin"]
+    },
+    {
+      name: "Ultranature",
+      link: "https://ultranature.ru",
+      description: "Натуральные немецкие масла для деревянного дома. Сайт создавался с нуля, дизайн + верстка + программирование + дружелюбная админка.",
+      tags:["Wordpress", "eCommerce", "Easy-admin", "Design"]
+    },
+    {
+      name: "CleanHouse",
+      link: "https://cleanhouse.com.ru",
+      description: "Клининговая компания. Редизайн старого сайта без потери старых ссылок, схранение позиций по SEO. Дизайн стал гораздо чище и приятнее, переделка логики шаблонов + удобная админка. Для каждой услуги были разработаны индивидуальные калькуляторы.",
+      tags: ["Wordpress", "Easy-admin", "Design", "Redesign", "SEO"]
+    },
+    {
+      name: "DION",
+      link: "https://dionwear.ru",
+      description: "The modern coveralls premium, protective clothing. Wordpress eCommerce website built from scratch.",
+      tags: ["Wordpress", "eCommerce", "Design"]
+    },
+    {
+      name: "Vapeguys",
+      link: "http://vapeguysdistro.com/",
+      description: "Vape distribution for US. Wordpress eCommerce website built from scratch.",
+      tags: ["Wordpress", "eCommerce", "Design"]
+    },
+    {
+      name: "2763 Morris",
+      link: "http://2763morris.com/",
+      description: "Luxury Apartments building in NY. Wordpress website built from scratch.",
+      tags: ["WordPress", "Design"]
+    },
+    {
+      name: "Beauty Ministry",
+      link: "https://beautyministry.ru/",
+      description: "Brand site for unique technology of brow creation, beauty industry. Wordpress eCommerce website built by design.",
+      tags: ["WordPress", "eCommerce"]
+    },
+    {
+      name: "Slam Stop",
+      link: "http://slamstop.com/",
+      description: "Car door soft closer production. Drupal multi-language international site built from scratch.",
+      tags: ["Drupal", "Multilang"]
+    },
+    {
+      name: "Ki-24",
+      link: "http://ki-24.ru/",
+      description: "Industrial refrigeration equipment. Developed in January 2014, now it is one of the leader on the Moscow market. Drupal website.",
+      tags: ["Drupal", "eCommerce"]
+    },
+      ],
+  en: [
+    {
+      name: "Physical and technical accelerator",
+      link: "http://fizteh.sitewanted.ru",
+      description: "Fiztech project. Build the layout and admin section by design. You can create the page from well prepared and styled blocks from admin.",
+      tags: ["Wordpress", "Clean", "Easy-admin"]
+    },
+    {
+      name: "ISS - Intelligent social systems",
+      link: "https://iss.digital",
+      description: "IT company that develop smart city services and own CRM. I built friendly admin section for easy moderation and frontend by design.",
+      tags: ["Wordpress", "Easy-admin"]
+    },
+    {
+      name: "Ultranature",
+      link: "https://ultranature.ru",
+      description: "Natural eco oil for a wooden houses. ECommerce WordPress built from scratch.",
+      tags:["Wordpress", "eCommerce", "Easy-admin", "Design"]
+    },
+    {
+      name: "CleanHouse",
+      link: "https://cleanhouse.com.ru",
+      description: "Cleaning company. Redesign of the old website, all the links should work, but design becomes much cleaner. Change the logic of the templates. Seo friendly. built calculators for each service.",
+      tags: ["Wordpress", "Easy-admin", "Design", "Redesign", "SEO"]
+    },
+    {
+      name: "DION",
+      link: "https://dionwear.ru",
+      description: "The modern coveralls premium, protective clothing. Wordpress eCommerce website built from scratch.",
+      tags: ["Wordpress", "eCommerce", "Design"]
+    },
+    {
+      name: "Vapeguys",
+      link: "http://vapeguysdistro.com/",
+      description: "Vape distribution for US. Wordpress eCommerce website built from scratch.",
+      tags: ["Wordpress", "eCommerce", "Design"]
+    },
+    {
+      name: "2763 Morris",
+      link: "http://2763morris.com/",
+      description: "Luxury Apartments building in NY. Wordpress website built from scratch.",
+      tags: ["WordPress", "Design"]
+    },
+    {
+      name: "Beauty Ministry",
+      link: "https://beautyministry.ru/",
+      description: "Brand site for unique technology of brow creation, beauty industry. Wordpress eCommerce website built by design.",
+      tags: ["WordPress", "eCommerce"]
+    },
+    {
+      name: "Slam Stop",
+      link: "http://slamstop.com/",
+      description: "Car door soft closer production. Drupal multi-language international site built from scratch.",
+      tags: ["Drupal", "Multilang"]
+    },
+    {
+      name: "Ki-24",
+      link: "http://ki-24.ru/",
+      description: "Industrial refrigeration equipment. Developed in January 2014, now it is one of the leader on the Moscow market. Drupal website.",
+      tags: ["Drupal", "eCommerce"]
+    },
+  ]
+}

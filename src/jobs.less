@@ -1,3 +1,4 @@
+@import "framework/vars";
 .company-name {
   text-transform: uppercase;
   margin: 0;
@@ -15,7 +16,7 @@
 .job-item {
     min-width: 360px;
     padding: 20px;
-    background: #eee;
+    background: @cotton;
     transform: translate(-50%);
     left: 50%;
   .time {
@@ -25,6 +26,16 @@
     margin: 1.2em 0;
   }
 }
+.likeSlide {
+  .job-item {
+    transform: translate(0);
+  }
+}
+.timeline-slide-wrap {
+  background: @cotton;
+}
+
+
 
 @media (max-width: 500px) {
   .job-item {

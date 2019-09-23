@@ -1,6 +1,20 @@
 @mobile: 500px;
+
+
 .timeline {
   margin: 40px 0;
+  &.likeSlide {
+    .timeline-active {
+      z-index: 5;
+    }
+    .timeline-slide-wrap {
+      z-index: -1;
+    }
+    .timeline-item {
+      display: none;
+      padding: 50px;
+    }
+  }
 }
 .timeline-header {
   text-transform: uppercase;
@@ -50,6 +64,8 @@
     }
   }
 }
+
+
 
 
 @media (max-width: @mobile) {
