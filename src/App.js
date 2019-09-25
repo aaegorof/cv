@@ -38,7 +38,7 @@ const App = () => {
             className="margin-large-t"
           />
         </div>
-        <div className="lg-margin-large-l col-lg-6">
+        <div className="lg-margin-large-l col-lg-6 heading">
           <h1>{general[lang].name} CV</h1>
           <h3>{general[lang].Heducation}</h3>
           <div className="education">
