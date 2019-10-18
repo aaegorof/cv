@@ -11,8 +11,10 @@ import rocketanimation from "./lotties/rocket"
 import topSvg from "./img/top-svg.svg"
 import ovalSvg from  "./img/Oval.svg"
 import Contacts from "./Contacts"
+import Woocommerce from "./Woocommerce";
 
 const App = () => {
+  const [products, changeProducts] = useState([])
   const state = useContext(StateContext);
   const lang = state.lang;
   const lottieOptions = {
@@ -23,6 +25,13 @@ const App = () => {
       preserveAspectRatio: 'xMidYMid slice'
     }
   };
+
+  useEffect(()=>{
+    Woocommerce.getProducts().then(res => {
+      console.log(res.data);
+      changeProducts(res.data)
+    })
+  },[])
 
   return (
     <div className="App">
@@ -106,6 +115,9 @@ const App = () => {
 
 
       <Contacts />
+      <div className="hidden">
+        {products.map(product => <div key={product}></div>)}
+      </div>
     </div>
   );
 };
