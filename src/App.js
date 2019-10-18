@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StateContext } from "./context";
 import { Formatted } from "./helpers";
 import "./App.less";
@@ -57,8 +57,7 @@ const App = () => {
         </div>
       </header>
 
-      <div className="container">
-        <div className="row margin-large-tb">
+        <div className="row margin-large-tb container">
           <div className="col-lg-6 lg-padding-big-r">
             <h2 className="text-center">{general[lang].Hskills}</h2>
             <div>
@@ -92,8 +91,8 @@ const App = () => {
         </div>
 
 
-        <div className="freelance padding-big-tb">
-          <h2 className="text-center uppercase">{general[lang].Hportolio}</h2>
+        <div className="freelance padding-big-tb container">
+          <h2 className="text-center uppercase h-bg" text="Portfolio">{general[lang].Hportolio}</h2>
           <div className="row">
           {portfolio[lang].map( project =>
               <div className="project-item" key={project.name}>
@@ -105,7 +104,6 @@ const App = () => {
           </div>
         </div>
 
-      </div>
 
       <Contacts />
     </div>

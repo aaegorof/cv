@@ -29,7 +29,7 @@ const Timeline = ({
 
   return (
     <>
-      {header && <h2 className="timeline-header">{header}</h2>}
+      {header && <h2 className="timeline-header h-bg" text="Experience">{header}</h2>}
       <div className={`timeline ${likeSlide ? "likeSlide" : ""}`}>
         <div
           className={`timeline-active ${direction === "left" ? "reverse" : ""}`}
@@ -72,9 +72,8 @@ const Timeline = ({
           <div className="timeline-slide-wrap">
             {sortedArray.map((item, index) => (
               <div
-                className="timeline-item"
+                className={`timeline-item ${active === index && "showed"}`}
                 key={index}
-                style={{ display: index === active ? "block" : "" }}
               >
                 {ItemToShow(item)}
               </div>

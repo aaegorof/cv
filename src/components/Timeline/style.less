@@ -14,10 +14,20 @@
     }
     .timeline-slide-wrap {
       z-index: -1;
+      overflow: hidden;
+      position: relative;
     }
     .timeline-item {
-      display: none;
       padding: 50px;
+      transform: translateY(-100%);
+      transition: all 0.1s ease;
+      position: absolute;
+      bottom: 100%;
+      &.showed {
+        transform: translateY(-0%);
+        position: relative;
+        bottom: 100%;
+      }
     }
     @media (max-width: @mobile) {
       .timeline-slide-wrap {
@@ -27,6 +37,8 @@
         display: block;
         padding: 0;
         margin-bottom: 20px;
+        position: relative;
+        transform: translateY(0);
       }
       .timeline-active, .timeline-dot {
         display: none;
