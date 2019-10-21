@@ -59,7 +59,7 @@ const Timeline = ({
                     left: intend + "%",
                     background: index === activeIndex ? lineColor : dotColor
                   }}
-                  className={`timeline-dot ${index === activeIndex ? "activeIndex" : ""}`}
+                  className={`timeline-dot ${index === activeIndex ? "active" : ""}`}
                   onClick={toggleItem(index)}
                 >
                   <div className="date">
