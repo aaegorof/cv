@@ -5,7 +5,7 @@ import "moment/locale/ru";
 import "font-awesome/css/font-awesome.min.css";
 import { Formatted } from "./helpers";
 import "./jobs.less";
-import Timeline from "./components/Timeline";
+import Timeline from "./components/Timeline/Timeline";
 import { StateContext } from "./context";
 
 const JobItem = ({ job }) => {

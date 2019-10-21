@@ -1,0 +1,32 @@
+@import "../../framework/vars";
+.arrow {
+  @size: 5vw;
+  @color: @tin;
+  position: absolute;
+  width: @size;
+  height: @size;
+  border-radius: 5px 0;
+  z-index: 2;
+  border: 3px solid;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  cursor: pointer;
+  color: @color;
+  top: 50%;
+  &.left {
+    transform: translateY(-50%) rotate(135deg);
+    left: @size/2;
+  }
+  &.right {
+    right: @size/2;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  &.top {
+    right: 0;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  &.botttom {
+    right: 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}

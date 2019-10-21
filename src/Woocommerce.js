@@ -16,6 +16,16 @@ const Woocommerce = {
   }
 };
 
+export const Posts = {
+  getProjects: () => {
+    return makeRequest("/wp/v2/project");
+  },
+  getProjectById: id => {
+    return makeRequest('/wp/v2/project/' + id)
+  }
+}
+
+
 function makeRequest(endpoint, method = "GET") {
   const oauth = getOauth();
 
@@ -29,6 +39,7 @@ function makeRequest(endpoint, method = "GET") {
 
   return axios.get(requestHTTP);
 }
+
 
 function getOauth() {
   return Oauth({

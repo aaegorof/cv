@@ -1,3 +1,4 @@
+@import "../../framework/vars";
 @mobile: 500px;
 
 .timeline-header {
@@ -13,7 +14,6 @@
       z-index: 5;
     }
     .timeline-slide-wrap {
-      z-index: -1;
       overflow: hidden;
       position: relative;
     }
@@ -43,6 +43,34 @@
       .timeline-active, .timeline-dot {
         display: none;
       }
+    }
+  }
+  .slides-nav {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: flex-end;
+    .current {
+      font-size: 36px;
+      margin-right: 10px;
+      line-height: 1;
+    }
+    @media @media-md-max {
+      display: none;
+    }
+  }
+  @media @media-lg-min {
+    .right {
+      margin-right: 60px;
+    }
+    .left {
+      margin-left: 60px;
+    }
+  }
+  @media @media-md-max {
+    .right, .left {
+      display: none;
     }
   }
 }

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import moment from "moment";
 import "./style.less";
+import Arrow from "../Arrow/Arrow";
+
 
 const Timeline = ({
   array,
@@ -14,23 +16,26 @@ const Timeline = ({
   likeSlide = true,
   initialSlide = null
 }) => {
-  const [active, changeActive] = useState(initialSlide);
+  const [activeIndex, changeActiveIndex] = useState(initialSlide);
   const start = moment(array[array.length - 1][dateField]);
   const last = moment(array[0][dateField]);
   const allTime = moment.duration(last.diff(start)).asSeconds();
 
   const toggleItem = index => () => {
-    index === active ? changeActive(null) : changeActive(index);
+    index === activeIndex ? changeActiveIndex(null) : changeActiveIndex(index);
   };
 
   const sortedArray = array.sort(
     (a, b) => new Date(b[dateField]) - new Date(a[dateField])
   );
 
+
   return (
     <>
       {header && <h2 className="timeline-header h-bg" text="Experience">{header}</h2>}
+
       <div className={`timeline ${likeSlide ? "likeSlide" : ""}`}>
+
         <div
           className={`timeline-active ${direction === "left" ? "reverse" : ""}`}
           style={{
@@ -52,17 +57,15 @@ const Timeline = ({
                   key={intend}
                   style={{
                     left: intend + "%",
-                    background: index === active ? lineColor : dotColor
+                    background: index === activeIndex ? lineColor : dotColor
                   }}
-                  className={`timeline-dot ${index === active ? "active" : ""}`}
+                  className={`timeline-dot ${index === activeIndex ? "activeIndex" : ""}`}
                   onClick={toggleItem(index)}
                 >
                   <div className="date">
                     {moment(item[dateField]).format("MMM YY")}
                   </div>
-                  {!likeSlide && (
-                    <div className="timeline-item">{ItemToShow(item)}</div>
-                  )}
+                  {!likeSlide && (<div className="timeline-item">{ItemToShow(item)}</div>)}
                 </div>
               );
             })}
@@ -72,14 +75,23 @@ const Timeline = ({
           <div className="timeline-slide-wrap">
             {sortedArray.map((item, index) => (
               <div
-                className={`timeline-item ${active === index && "showed"}`}
+                className={`timeline-item ${activeIndex === index && "showed"}`}
                 key={index}
               >
                 {ItemToShow(item)}
+                <div className="slides-nav">
+                  <div className="current">{activeIndex +1}</div>
+                  <div className="from"> / {sortedArray.length}</div>
+                </div>
               </div>
             ))}
+
           </div>
         )}
+        <div className="timeline-nav">
+          { (activeIndex-1 >= 0) && <Arrow direction="left" handler={toggleItem(activeIndex-1)}/>}
+          {  (activeIndex+1 < sortedArray.length) && <Arrow direction="right" handler={toggleItem(activeIndex+1)}/>}
+        </div>
       </div>
     </>
     //array.map(item => <JobItem item={item} lang={lang}/>)
