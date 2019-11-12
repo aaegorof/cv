@@ -46,15 +46,11 @@ export const general = {
     degree: "2010 - Master degree",
     lang: "Russian – native\n" +  "English – advanced",
     profText:
-      "Having been working as a web-developer for over 7 years, I am enthusiastic about new technology and follow the latest trends in the field of web design and frontend development.\n" +
+      "I think the best part of me as a frontend developer is a feeling of design and product itself. Also i can understand and talk not only with computers on language of code but with my customers, cause i do care what I am producing in the digital world.  \n" +
       "\n" +
-      "During these years I have gained a considerable experience in the following areas of expertise: building web-sites from scratch, social media marketing and Internet marketing, prototypes and UX/ UI development, running contextual advertising campaigns(Yandex and Google), analytical evaluation of websites using Metrika + Google Analytics, working with data, writing technical specifications, creating animated and static banners, editing PHP templates.\n" +
-      "\n" +
-      "The common Problem:\n" +
-      "Mostly all developers has a lack of the design vision and feel OR they do not have enough knowledge in Marketing area and how products will go to market and will be advertised or they just don't care about it.\n" +
-      "\n" +
-      "Customers says that it's the best part of me!\n" +
-      "Im not just a coder, i will think twice before doing, i will imagine myself as the owner of that business and also as a customer. Viewing the problem from different angles always brings best solutions. Experience in different areas helps me a lot.",
+      "I’ve also been studying psychology for a while and read a lot about usability, UX design and marketing - that helps me in my profession also, because I want to create beautiful interfaces that will help people solve their problems that’s why it’s not enough to know only how to code.\n" +
+        "\n" +
+        "Im not just a coder, i will think twice before doing, sometimes you should consult the stakeholder but not do what he said straight away, viewing the problem from different angles always brings better solutions. As i can see that kind of personality is hard to find in our profession, i believe that it will help me to grow as a strong professional, that’s why i spend almost all of my free time in reading.",
     softSkills:
       "I have recommendations from my colleagues\n" +
       "\n" +

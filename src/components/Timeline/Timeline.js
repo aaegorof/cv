@@ -56,8 +56,7 @@ const Timeline = ({
                 <div
                   key={intend}
                   style={{
-                    left: intend + "%",
-                    background: index === activeIndex ? lineColor : dotColor
+                    left: intend + "%"
                   }}
                   className={`timeline-dot ${index === activeIndex ? "active" : ""}`}
                   onClick={toggleItem(index)}
@@ -88,10 +87,11 @@ const Timeline = ({
 
           </div>
         )}
-        <div className="timeline-nav">
-          { (activeIndex-1 >= 0) && <Arrow direction="left" handler={toggleItem(activeIndex-1)}/>}
-          {  (activeIndex+1 < sortedArray.length) && <Arrow direction="right" handler={toggleItem(activeIndex+1)}/>}
+        {activeIndex !== null && <div className="timeline-nav">
+          {(activeIndex - 1 >= 0) && <Arrow direction="left" handler={toggleItem(activeIndex - 1)}/>}
+          {(activeIndex + 1 < sortedArray.length) && <Arrow direction="right" handler={toggleItem(activeIndex + 1)}/>}
         </div>
+        }
       </div>
     </>
     //array.map(item => <JobItem item={item} lang={lang}/>)

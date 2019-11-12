@@ -58,7 +58,10 @@ const App = () => {
           />
         </div>
         <div className="lg-margin-large-l col-lg-6 heading">
-          <h1>{general[lang].name} CV</h1>
+          <h1>
+            {general[lang].name} CV
+            <a className="fa fa-print" onClick={()=>{window.print()}}></a>
+          </h1>
           <h3>{general[lang].Heducation}</h3>
           <div className="education">
             <div>{general[lang].education}</div>
@@ -73,8 +76,8 @@ const App = () => {
         </div>
       </header>
 
-      <div className="row margin-large-tb container">
-        <div className="col-lg-6 lg-padding-big-r">
+      <div className="row margin-large-tb container skills">
+        <div className="col-lg-6 lg-padding-big-r prof-skills">
           <h2 className="text-center">{general[lang].Hskills}</h2>
           <div>
             <Formatted val="profText" />
@@ -93,7 +96,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className="col-lg-6 lg-padding-big-l relative">
+        <div className="col-lg-6 lg-padding-big-l relative soft-skills">
           <img src={ovalSvg} className="oval-svg" />
           <h2 className="text-center">{general[lang].Hsoft}</h2>
           <div>
@@ -102,11 +105,11 @@ const App = () => {
         </div>
       </div>
 
-      <div className="job-list">
+      <section className="job-list">
         <Joblist lang={lang} />
-      </div>
+      </section>
 
-      <div className="freelance padding-big-tb container">
+      <section className="freelance padding-big-tb container">
         <h2 className="text-center uppercase h-bg" text="Portfolio">
           {general[lang].Hportolio}
         </h2>
@@ -129,7 +132,7 @@ const App = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       <Contacts />
       <div className="hidden">

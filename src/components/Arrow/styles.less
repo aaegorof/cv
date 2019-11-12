@@ -1,24 +1,20 @@
 @import "../../framework/vars";
 .arrow {
-  @size: 5vw;
+  @size: 7vw;
   @color: @tin;
   position: absolute;
   width: @size;
   height: @size;
-  border-radius: 5px 0;
   z-index: 2;
-  border: 3px solid;
-  border-left-color: transparent;
-  border-top-color: transparent;
   cursor: pointer;
   color: @color;
   top: 50%;
   &.left {
     transform: translateY(-50%) rotate(135deg);
-    left: @size/2;
+    left: 0;
   }
   &.right {
-    right: @size/2;
+    right: 0;
     transform: translateY(-50%) rotate(-45deg);
   }
   &.top {
@@ -28,5 +24,39 @@
   &.botttom {
     right: 0;
     transform: translateY(-50%) rotate(45deg);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(253, 215, 101);
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(1);
+    opacity: 0.4;
+    transition: all 0.15s @bezier;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin-left: 12.5%;
+    margin-top: 12.5%;
+    border: 3px solid;
+    border-radius: 5px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    mix-blend-mode: difference;
+  }
+  &:hover {
+    opacity: 1;
+    &:before {
+      transform: scale(0.5) translate(20%,20%);
+      opacity: 1;
+    }
   }
 }
